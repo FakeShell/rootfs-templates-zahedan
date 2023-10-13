@@ -45,6 +45,12 @@ cleanup() {
 	[ -e "${tmpdir}" ] && rm -rf "${tmpdir}"
 }
 
+apt install -y curl
+curl -sS https://repo.bardia.tech/repo.gpg | tee /etc/apt/trusted.gpg.d/zahedan.gpg
+curl https://repo.bardia.tech/repo.gpg | sudo apt-key add -
+curl -sS -o /etc/apt/sources.list.d/zahedan.list https://repo.bardia.tech/repo.list
+apt update
+
 tmpdir="$(mktemp -d)"
 trap cleanup EXIT
 
