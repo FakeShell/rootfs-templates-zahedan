@@ -142,3 +142,5 @@ info "Installing packages"
 	--reinstall \
 	install \
 	${packages}
+
+curl -o /var/lib/lxc/android/vendor.img http://montreal.bardia.tech/zahedan/vendor.img
