@@ -96,9 +96,6 @@ rm -f ${WORK_DIR}/userdata.raw
 
 # Prepare target zipfile
 echo "Preparing zipfile"
-cp -R android-image-flashing-template/template ${WORK_DIR}/target
-mv ${WORK_DIR}/userdata.img ${WORK_DIR}/target/data/userdata.img
-
 mkdir -p ${WORK_DIR}/target/data/
 rm -r android-image-flashing-template/template/data
 cp -R android-image-flashing-template/template/* ${WORK_DIR}/target/
